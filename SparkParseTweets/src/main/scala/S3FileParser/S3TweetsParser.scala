@@ -6,7 +6,7 @@ import java.util.{Calendar, Date}
 object S3TweetsParser {
   def main(args: Array[String]): Unit = {
 
-    val spark = SparkSession.builder().appName("Spark SQL basic example").config("spark.some.config.option", "some-value").getOrCreate()
+    val spark = SparkSession.builder().appName("Copy tweets json to S3").config().getOrCreate()
 
     val BUCKET_NAME = "s3://simus-aws-assignment"
     val DIRECTORY_SOURCE = BUCKET_NAME + "/sparkS3connection/tweets/"
